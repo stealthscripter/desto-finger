@@ -101,7 +101,7 @@ function GameLayout() {
   return (
     <div
       className="p-4 md:grid md:grid-cols-7 gap-x-2 min-h-screen items-start 
-     font-2P bg-[url(/assets/backgrounds/stacked-steps-haikei.svg)] bg-slate-900 bg-blend-difference"
+     font-2P bg-[url(assests/backgrounds/stacked-steps-haikei.svg)] bg-slate-900 bg-blend-difference"
       style={{ backgroundRepeat: "no-repeat", backgroundSize: "cover" }}
     >
       {!isStarted ? (
