@@ -83,9 +83,6 @@ function GameLayout() {
           setCurrentWinner(winner);
           setHistory((prev) => [...prev, winner]);
           const scores = GameEngine.getScores();
-          console.log(
-            `Player Score: ${scores.playerScore}, Computer Score: ${scores.computerScore}`
-          );
           setComputerScore(scores.computerScore);
           setPlayerScore(scores.playerScore);
           setWinnerFinger(scores.winnerFinger);
@@ -171,7 +168,7 @@ function GameLayout() {
           </section>
           <section className="flex justify-center items-center flex-col">
             <button
-              className={`border border-amber-700 hover:bg-amber-800 hover:text-white duration-500 col-start-3 col-span-3 md:py-3 cursor-pointer md:mt-10 md:px-4 ${
+              className={`border md:my-0 my-10 py-2 px-2 text-xs md:text-base border-amber-700 hover:bg-amber-800 hover:text-white duration-500 col-start-3 col-span-3 md:py-3 cursor-pointer md:mt-10 md:px-4 ${
                 isThrowing ? "opacity-50 cursor-not-allowed" : ""
               }`}
               onClick={handleStartGame}
@@ -184,12 +181,26 @@ function GameLayout() {
                 : "Start Game"}
             </button>
             {history.length >= 1 && (
-              <div className="mt-10 w-3/4 flex justify-between items-center">
-                <span className="text-2xl">{String(playerScore)}</span>
-                <span className="text-2xl">-</span>
-                <span className="text-2xl">{String(computerScore)}</span>
-              </div>
+              <div className="mt-10 md:w-3/4 w-20 flex justify-between items-center md:mb-0">
+                <span className="md:text-2xl">{String(playerScore)}</span>
+                <span className="md:text-2xl">-</span>
+                <span className="md:text-2xl">{String(computerScore)}</span>
+              </div> 
             )}
+            {history.length >= 1 && (
+            <section className="col-span-8 flex flex-col justify-evenly mt-10 md:hidden mb-5">
+              
+              <div>
+                <h1 className="text-center my-2 md:text-base text-xs">
+                  {isThrowing ? "" : currentWinner}
+                </h1>
+                <h1 className="text-center md:text-xl">Round {history.length}</h1>
+                <p className="md:text-sm text-xs text-center mt-2">
+                  {isThrowing ? "" : winnerFinger}
+                </p>
+              </div>
+            </section>
+          )}
           </section>
           <section className="col-span-3">
             <ComputerCore
@@ -199,7 +210,7 @@ function GameLayout() {
             />
           </section>
           {history.length >= 1 && (
-            <section className="col-span-8 flex justify-evenly mt-10">
+            <section className="col-span-8 md:flex justify-evenly mt-10 hidden">
               <div className="">
                 you throw {selectedPlayerFingers.length} fingers
               </div>
