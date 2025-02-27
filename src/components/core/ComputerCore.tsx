@@ -1,6 +1,6 @@
 
 import React, { useImperativeHandle, useState , ForwardedRef} from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../store";
 
 const allFingers = [

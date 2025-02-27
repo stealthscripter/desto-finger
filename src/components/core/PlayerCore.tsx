@@ -1,7 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../store";
 import { ChangeEvent } from "react";
-import { setPlayerFinger } from "../../features/GameSlice";
 
 const leftFingers = [
   {
