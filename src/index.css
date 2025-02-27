@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme{
+    --font-2P: "Press Start 2P", "serif";
+    --font-gluten: "Gluten" , "serif";
+    --font-tanker: "Tanker" ,"serif";
+    --color-brown: '#f5f5dc';
+}
+*{ 
+    box-sizing: border-box;
+}
