@@ -56,7 +56,6 @@ interface PlayerCoreProps {
 }
 
 function PlayerCore({ selectedFingers, setSelectedFingers , isThrowing }: PlayerCoreProps) {
-  const dispatch = useDispatch();
   const userPick = useSelector(
     (state: RootState) => state.picksVariable.userPicks
   );
@@ -67,10 +66,6 @@ function PlayerCore({ selectedFingers, setSelectedFingers , isThrowing }: Player
     );
   }
 
-  function handleStart() {
-    console.log("Start the game");
-    dispatch(setPlayerFinger(selectedFingers));
-  }
   return (
     <section className="grid grid-cols-12 gap-x-5 gap-y-5">
       <section className="py-5 col-span-12 flex justify-center flex-col items-center space-y-2">

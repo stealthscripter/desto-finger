@@ -73,7 +73,6 @@ const ComputerCore = React.forwardRef(
   ) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [tempFinger, setTempFinger] = useState<string | null>(null);
-  const dispatch = useDispatch();
   const computerPick = useSelector(
     (state: RootState) => state.picksVariable.computerPicks
   );

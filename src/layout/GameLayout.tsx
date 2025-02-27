@@ -39,12 +39,7 @@ function GameLayout() {
   const computerSelectionRef = useRef<ComputerSelectionMethods | null>(null);
   const computerCoreRef = useRef<ComputerCoreMethods | null>(null);
 
-  const computerFinger = useSelector(
-    (state: RootState) => state.gameState.computerFinger
-  );
-  const playerFinger = useSelector(
-    (state: RootState) => state.gameState.playerFinger
-  );
+
   const userPick = useSelector(
     (state: RootState) => state.picksVariable.userPicks
   );

@@ -11,7 +11,7 @@ const gridSchema = [
   { picks: "oli", inputGrid: "col-start-8 " },
 ];
 
-const ComputerSelection = forwardRef((props, ref) => {
+const ComputerSelection = forwardRef((_, ref) => {
   const dispatch = useDispatch<AppDispatch>();
   const computerPicks = useSelector(
     (state: RootState) => state.picksVariable.computerPicks
