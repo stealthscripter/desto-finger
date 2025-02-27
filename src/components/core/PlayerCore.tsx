@@ -28,23 +28,23 @@ const leftFingers = [
 const rightFingers = [
   {
     id: "r-finger-1",
-    styles: "mt-28",
+    styles: "md:mt-28 mt-48",
   },
   {
     id: "r-finger-2",
-    styles: "mt-10",
+    styles: "md:mt-10 mt-40",
   },
   {
     id: "r-finger-3",
-    styles: "",
+    styles: "mt-32 md:mt-0",
   },
   {
     id: "r-finger-4",
-    styles: "mt-10",
+    styles: "md:mt-10 mt-40",
   },
   {
     id: "r-finger-thumb",
-    styles: "mt-52 -mb-16 rotate-[0.5rad]",
+    styles: "md:mt-52 md:-mb-16 -mb-14  md:rotate-[0.5rad] rotate-[0.5rad] mt-60 -ms-3",
   },
 ];
 
@@ -68,9 +68,9 @@ function PlayerCore({ selectedFingers, setSelectedFingers , isThrowing }: Player
   return (
     <section className="grid grid-cols-12 gap-x-5 gap-y-5">
       <section className="py-5 col-span-12 flex justify-center flex-col items-center space-y-2">
-        <h1>How Many Fingers do you want to throw? </h1>
+        <h1 className="text-xs text-center leading-6 md:text-base md:leading-0">How Many Fingers do you want to throw? </h1>
       </section>
-      <section className="py-5 h-96 col-span-12 grid grid-cols-2 gap-x-12 px-16">
+      <section className="py-5 h-96 col-span-12 grid grid-cols-2 gap-x-12 md:px-16">
         <section className="px-5">
           {/* Left Hand */}
           <div className="w-full h-full grid grid-cols-5 grid-rows-5 gap-x-2">
@@ -108,7 +108,7 @@ function PlayerCore({ selectedFingers, setSelectedFingers , isThrowing }: Player
 
         <section className="px-5">
           {/* Right Hand */}
-          <div className="w-full h-full grid grid-cols-5 grid-rows-5 gap-x-2 scale-x-[-1]">
+          <div className="w-full h-full grid grid-cols-5 grid-rows-5 gap-x-2 scale-x-[-1] border border-amber-500">
             {rightFingers.map((finger) => (
               <div
                 key={finger.id}
@@ -134,7 +134,7 @@ function PlayerCore({ selectedFingers, setSelectedFingers , isThrowing }: Player
                 ></label>
               </div>
             ))}
-            <div className="bg-yellow-100 col-span-5 z-20 me-10"></div>
+            <div className="bg-yellow-100 col-span-5 z-20 md:me-10 me-7 rounded-b-4xl"></div>
           </div>
         </section>
       </section>

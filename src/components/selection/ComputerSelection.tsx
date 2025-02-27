@@ -48,10 +48,10 @@ const ComputerSelection = forwardRef((_, ref) => {
   return (
     <section className="grid grid-cols-12 gap-x-5 gap-y-5">
       <section className="col-span-12 py-5 flex justify-center">
-        <h1 className="text-xl">Player 2 | Computer </h1>
+        <h1 className="md:text-xl text-sm">Player 2 | Computer </h1>
       </section>
-      <section className="mb-6 col-span-12 flex justify-center">
-        <h1 className="text-xl">Game Variable </h1>
+      <section className="mb-6 col-span-12 flex flex-col space-y-2 text-center">
+        <h1 className="md:text-xl text-xs">Game Variable </h1>
       </section>
 
       <section className="col-start-2 col-span-10 gap-x-10 grid grid-cols-3 gap-y-7">
@@ -71,8 +71,7 @@ const ComputerSelection = forwardRef((_, ref) => {
             <label
               htmlFor={pick.picks}
               onClick={(e) => e.preventDefault()}
-              className={`select-none py-10 cursor-pointer transition-colors duration-200 ease-in-out w-full
-               peer-checked:bg-blue-800 peer-checked:text-white flex items-center justify-center ${
+              className={`select-none py-10 cursor-pointer transition-colors duration-200 ease-in-out w-full md:text-sm text-[0.6rem] tracking-widest peer-checked:bg-red-800 peer-checked:text-white flex items-center justify-center ${
                  !availablePicks.includes(pick.picks) ? "border border-red-800 text-red-800" : ""
                }`}
             >

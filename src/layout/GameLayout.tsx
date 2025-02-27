@@ -117,7 +117,7 @@ function GameLayout() {
           </section>
           <section className="flex justify-center flex-col">
             <button
-              className={`border border-amber-700 col-start-3 col-span-3 md:py-3 md:text-base text-[0.7rem] px-6 py-3 cursor-pointer md:mt-10 my-8 md:px-4 ${
+              className={`border border-amber-700 col-start-3 col-span-3 md:py-3 md:text-base text-[0.7rem] px-6 py-3 cursor-pointer md:mt-10 w-1/2 md:w-full mx-auto my-8 md:px-4 ${
                 isProcessing ? "opacity-50 cursor-not-allowed" : ""
               }`}
               onClick={handleReadyToPlay}
@@ -128,7 +128,7 @@ function GameLayout() {
             </button>
             {/* Conditionally render the error message */}
             {errors && (
-              <p className="text-[0.8rem] text-red-800 mt-2">
+              <p className="md:text-[0.8rem] text-[0.5rem] text-red-800 mt-2">
                 {errors}
               </p>
             )}
@@ -141,14 +141,14 @@ function GameLayout() {
       ) : (
         // Rest of the code remains unchanged
         <>
-          <section className="col-span-7">
-            <h1 className="text-sm text-center">
+          <section className="col-span-7 flex-col space-y-7 items-center justify-center text-center py-5 md:py-0">
+            <h1 className="text-[0.6rem] md:text-sm text-center md:leading-0 leading-6">
               you can choose the thrown finger number by click fingers and
               toggle it{" "}
             </h1>
             <button
               disabled={isThrowing}
-              className="text-sm border border-amber-600 px-4 py-2 cursor-pointer hover:bg-amber-800 hover:text-white duration-500"
+              className="md:text-sm text-[0.6rem] border border-amber-600 px-4 md:mt-0 py-2 cursor-pointer hover:bg-amber-800 hover:text-white duration-500"
               onClick={() => {
                 dispatch(setStarted(false));
                 dispatch(resetPicks());
