@@ -1,6 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { s } from "framer-motion/client";
-
 interface GameState {
     history: string[];
     currentWinner: string;

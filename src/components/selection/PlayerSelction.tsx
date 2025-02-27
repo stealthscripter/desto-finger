@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
-import { resetPicks, resetUserPicks, setUserPick } from "../../features/PickSlice";
+import { resetUserPicks, setUserPick } from "../../features/PickSlice";
 
 // Grid schema for the player selection options
 const gridSchema = [
@@ -17,14 +17,10 @@ interface PlayerSelectionProps {
 }
 
 const PlayerSelection: React.FC<PlayerSelectionProps> = ({ isProcessing }) => {
-  const [playerFinger, setPlayerFinger] = useState<number>(0);
 
   // Redux state and dispatch
   const userPick = useSelector(
     (state: RootState) => state.picksVariable.userPicks
-  );
-  const computerPick = useSelector(
-    (state: RootState) => state.picksVariable.computerPicks
   );
   const dispatch = useDispatch();
 

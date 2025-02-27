@@ -1,7 +1,6 @@
 
-import React, { ChangeEvent, useImperativeHandle, useState , forwardRef, ForwardedRef} from "react";
+import React, { useImperativeHandle, useState , ForwardedRef} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setComputerFinger } from "../../features/GameSlice";
 import { RootState } from "../../store";
 
 const allFingers = [

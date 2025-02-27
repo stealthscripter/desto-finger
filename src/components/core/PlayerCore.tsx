@@ -1,20 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent } from "react";
 import { setPlayerFinger } from "../../features/GameSlice";
 
-const allFingers = [
-  "lc-finger-1",
-  "lc-finger-2",
-  "lc-finger-3",
-  "lc-finger-4",
-  "lc-finger-thumb",
-  "rc-finger-1",
-  "rc-finger-2",
-  "rc-finger-3",
-  "rc-finger-4",
-  "rc-finger-thumb",
-];
 const leftFingers = [
   {
     id: "l-finger-1",

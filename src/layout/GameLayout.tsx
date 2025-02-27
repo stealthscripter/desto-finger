@@ -1,16 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import ComputerSelection from "../components/selection/ComputerSelection";
 import PlayerSelction from "../components/selection/PlayerSelction";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
 import GameEngine from "../utils/GameEngine";
 import {
-  setComputerFinger,
-  setComputerScore,
-  setPlayerFinger,
-  setPlayerScore,
   setStarted,
-  setWhoStart,
 } from "../features/GameSlice";
 import PlayerCore from "../components/core/PlayerCore";
 import ComputerCore from "../components/core/ComputerCore";
