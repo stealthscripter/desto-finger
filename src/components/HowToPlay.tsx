@@ -25,7 +25,7 @@ function HowToPlay() {
         <h1 className="">Desto Finger Game</h1>
       </section>
       <section className="border border-amber-600 col-start-2 col-end-8 overflow-hidden">
-        <div className="flex justify-center items-center min-h-screen overflow-y-hidden">
+        <div className="flex justify-center items-center min-h-screen overflow-x-hidden">
           <Carousel slides={slides} />
         </div>
       </section>
