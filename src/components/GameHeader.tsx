@@ -14,10 +14,7 @@ function GameHeader() {
           <button onClick={() => dispatch(setPlayNow(true))} className="md:border-2 md:bg-transparent bg-black md:border-red-800 md:px-4 md:py-2 px-2 py-2 rounded-3xl md:text-base text-sm cursor-pointer hover:bg-black hover:text-white duration-300 text-white md:text-black">Play Now</button>
         </li>
 
-        {/* The Glimmering centered in the middle */}
-        <li className="col-start-4 col-end-7 justify-self-center hidden md:flex">
-          <h1>stealthscripter</h1>
-        </li>
+       
 
         {/* Menu button in the last column */}
         <li className="md:col-start-9 flex md:justify-center md:text-base text-sm">

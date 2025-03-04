@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
-@theme{
-    --font-2P: "Press Start 2P", "serif";
-    --font-gluten: "Gluten" , "serif";
-    --font-tanker: "Tanker" ,"serif";
-    --color-brown: '#f5f5dc';
+@theme {
+  --font-2P: "Press Start 2P", "serif";
+  --font-gluten: "Gluten", "serif";
+  --font-tanker: "Tanker", "serif";
+  --color-brown: "#f5f5dc";
 }
-*{ 
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
 }
