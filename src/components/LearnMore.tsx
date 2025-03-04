@@ -1,14 +1,14 @@
 function LearnMore() {
   return (
-    <div className="mt-18 col-span-9 text-xl grid grid-cols-8 border border-green-500 items-start bg-red-200 py-20">
-      <section className="border-3 border-yellow-900 col-start-3 col-end-7 font-gluten text-5xl font-semibold text-center leading-14">
+    <div className="mt-18 col-span-9 text-xl grid grid-cols-8 items-start py-20">
+      <section className="col-start-3 col-end-7 font-gluten text-5xl font-semibold text-center leading-14">
         <h1 className="">The History of Desto Finger is</h1>
         <h2 className="">Here</h2>
       </section>
-      <section className="border border-amber-900 col-start-3 col-span-2 mt-10">
+      <section className="col-start-3 col-span-2 mt-10">
         <img src="/images/learn-more.png" alt="" />
       </section>
-      <section className="border border-amber-900 mt-10 col-span-3 px-4 py-5 flex flex-col space-y-10 font-gluten tracking-wide leading-8">
+      <section className="mt-10 col-span-3 px-4 py-5 flex flex-col space-y-10 font-gluten tracking-wide leading-8">
         <p>
           In Ethiopia, there's a cultural tendency to reshape foreign words and
           ideas, making them uniquely Ethiopian. For instance, the word

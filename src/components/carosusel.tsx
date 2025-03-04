@@ -3,7 +3,7 @@ import { useState, useRef, useId, useEffect } from "react";
 
 interface SlideData {
   title: string;
-  button: string;
+  text: string;
   src: string;
 }
 
@@ -61,10 +61,10 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     event.currentTarget.style.opacity = "1";
   };
 
-  const { src, button, title } = slide;
+  const { src, text, title } = slide;
 
   return (
-    <div className="[perspective:1200px] [transform-style:preserve-3d]">
+    <div className="[perspective:1200px] [transform-style:preserve-3d] font-gluten">
       <li
         ref={slideRef}
         className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 "
@@ -106,17 +106,14 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         </div>
 
         <article
-          className={`absolute right-0 bottom-0 p-[4vmin] bg-yellow-500 transition-opacity duration-1000 ease-in-out ${
+          className={`absolute bottom-0 p-[4vmin] bg-yellow-500 transition-opacity duration-1000 ease-in-out flex items-center ${
             current === index ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
-          <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold  relative">
-            {title}
-          </h2>
-          <div className="flex justify-center">
-            <button className="mt-6  px-4 py-2 w-fit mx-auto sm:text-sm text-black bg-white h-12 border border-transparent text-xs flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
-              {button}
-            </button>
+          <h4 className="basis-1/2 px-4 text-7xl font-bold">0{index + 1}</h4>
+          <div className="text-start px-4 py-2">
+            <h1 className="text-3xl my-2 font-bold">{title}</h1>
+            <p className="text-lg">{text}</p>
           </div>
         </article>
       </li>

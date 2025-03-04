@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import GameHeader from "../components/GameHeader";
 import Hero from "../components/Hero";
 import HowToPlay from "../components/HowToPlay";
@@ -14,6 +15,7 @@ function FutureLayout() {
       <Hero />
       <LearnMore />
       <HowToPlay />
+      <Footer />
     </div>
   );
 }
