@@ -11,10 +11,6 @@ function Footer() {
             {" "}
             <img src="./icons/logo-github.svg" alt="" className="size-7" />
           </a>
-          <a href="https://www.linkedin.com/in/natnaelayelee/" target="_blank">
-            {" "}
-            <img src="./icons/logo-linkedin.svg" alt="" className="size-7" />
-          </a>
         </div>
       </section>
     </div>
